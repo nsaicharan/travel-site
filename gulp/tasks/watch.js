@@ -1,5 +1,5 @@
 const gulp = require("gulp"),
-    browserSync = require("browser-sync").create();
+    browserSync = require("browser-sync").create(),
     watch = require("gulp-watch");
 
 gulp.task("watch", () => {
@@ -18,6 +18,14 @@ gulp.task("watch", () => {
     gulp.start("cssInject");
     console.log("inject task running..");
   });
+
+  watch('./app/assets/scripts/**/*.js', function(){
+    gulp.start('scriptsRefresh');
+  });
+});
+
+gulp.task('scriptsRefresh', ['scripts'], function(){
+  browserSync.reload();
 });
 
 gulp.task("cssInject", ["styles"], function() {

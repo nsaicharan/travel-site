@@ -3,6 +3,7 @@
 	position: relative;
 	border-bottom: 10px solid $mainBlue;
 
+
 	&__image {
 		display: block;
 	}
@@ -14,6 +15,11 @@
 		transform: translateY(-50%);
 		width: 100%;
 		text-align: center;
+		padding-top: 80px;
+
+		@mixin atMedium {
+			padding-top: 60px;
+		}
 	}
 
 	&__title {
