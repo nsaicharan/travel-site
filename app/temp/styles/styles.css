@@ -1289,3 +1289,17 @@ a {
     }
     }
 
+.reveal-item {
+    opacity: 0;
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+    -webkit-transition: 1s ease-out;
+    transition: 1s ease-out;
+}
+
+.reveal-item--is-visible {
+        opacity: 1;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+
